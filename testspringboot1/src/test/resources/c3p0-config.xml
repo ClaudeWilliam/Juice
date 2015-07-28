@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+
+	<!-- This app is massive! -->
+	<named-config name="c3p0">
+		<!--数据库连接池的基本属性 -->
+		<property name="user">root</property>
+		<property name="password">qjq110120</property>
+		<property name="jdbcUrl">jdbc:mysql:///student</property>
+		<property name="driverClass">com.mysql.jdbc.Driver </property>
+		<!-- 若数据库连接池的连接不足，则向数据库服务器一次申请链接的个数 5 个 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 数据库 初始化的大小 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 数据库连接池最小的连接数 -->
+		<property name="minPoolSize">10</property>
+		<!-- 数据库连接池最大的连接数 -->
+		<property name="maxPoolSize">15</property>
+		<!--数据库连接池可以处理最大的statement个数 -->
+		<property name="maxStatements">20</property>
+		<property name="macStatementPerConnection">5</property>
+	</named-config>
+</c3p0-config>
